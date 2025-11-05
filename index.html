@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jay Bhole Weather AI</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="app-header">
+        <span class="app-icon" aria-hidden="true">🕉️🔱</span>
+        <h1 class="app-title">Jay Bhole Weather AI</h1>
+      </header>
+      <main class="app-main">
+        <form id="weather-form" class="weather-form" novalidate>
+          <label class="visually-hidden" for="city-input">City Name</label>
+          <input
+            id="city-input"
+            class="city-input"
+            type="text"
+            name="city"
+            placeholder="शहर का नाम दर्ज करें"
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="weather-button">Get Weather</button>
+        </form>
+        <div id="status-message" class="status-message" role="status"></div>
+        <section id="weather-card" class="weather-card" hidden>
+          <div class="weather-stat">
+            <h2 class="stat-label">तापमान</h2>
+            <p id="temperature" class="stat-value">-- °C</p>
+          </div>
+          <div class="weather-stat">
+            <h2 class="stat-label">आर्द्रता</h2>
+            <p id="humidity" class="stat-value">-- %</p>
+          </div>
+          <div class="weather-stat">
+            <h2 class="stat-label">वर्षा संभावना</h2>
+            <p id="rain-chance" class="stat-value">-- %</p>
+          </div>
+          <div class="advice-block">
+            <h2 class="advice-title">ऋतु सलाह</h2>
+            <p id="season-advice" class="advice-text">
+              मौसम जानकारी प्राप्त करने के लिए शहर दर्ज करें।
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
